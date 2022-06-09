@@ -35,7 +35,7 @@ const router = new VueRouter({
         },
         {
             path: '/who-we-are',
-            name: 'who-whe-are',
+            name: 'who-we-are',
             component: WhoWeAreComponent,
         }
     ]
