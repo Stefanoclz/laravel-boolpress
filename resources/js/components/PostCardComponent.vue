@@ -1,11 +1,12 @@
 <template>
-  <div class="d-flex">
-    <div>
+  <div class="d-flex mb-5 border border-success">
+    <div class="mr-4">
       <img :src="'storage/' + cover" :alt="title" />
     </div>
-    <div class="middle">
-      <div>{{ title }}</div>
-      <div>{{ content }}</div>
+    <div class="middle text-center">
+      <h2>{{ title }}</h2>
+      <hr />
+      <p>{{ content }}</p>
     </div>
   </div>
 </template>
@@ -27,7 +28,7 @@ export default {
 
 <style lang="scss" scoped>
 img {
-  max-width: 200px;
+  max-width: 400px;
 }
 
 .middle {

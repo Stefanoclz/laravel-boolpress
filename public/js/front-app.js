@@ -2030,6 +2030,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "PostCardComponent",
   props: ["title", "cover", "content"],
@@ -2086,6 +2087,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_PostCardListComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/PostCardListComponent */ "./resources/js/components/PostCardListComponent.vue");
+//
 //
 //
 //
@@ -6594,7 +6596,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "img[data-v-98af649c] {\n  max-width: 200px;\n}\n.middle[data-v-98af649c] {\n  align-self: center;\n}", ""]);
+exports.push([module.i, "img[data-v-98af649c] {\n  max-width: 400px;\n}\n.middle[data-v-98af649c] {\n  align-self: center;\n}", ""]);
 
 // exports
 
@@ -38563,15 +38565,17 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "d-flex" }, [
-    _c("div", [
+  return _c("div", { staticClass: "d-flex mb-5 border border-success" }, [
+    _c("div", { staticClass: "mr-4" }, [
       _c("img", { attrs: { src: "storage/" + _vm.cover, alt: _vm.title } }),
     ]),
     _vm._v(" "),
-    _c("div", { staticClass: "middle" }, [
-      _c("div", [_vm._v(_vm._s(_vm.title))]),
+    _c("div", { staticClass: "middle text-center" }, [
+      _c("h2", [_vm._v(_vm._s(_vm.title))]),
       _vm._v(" "),
-      _c("div", [_vm._v(_vm._s(_vm.content))]),
+      _c("hr"),
+      _vm._v(" "),
+      _c("p", [_vm._v(_vm._s(_vm.content))]),
     ]),
   ])
 }
@@ -38642,13 +38646,15 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
     _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-12" }, [_vm._v("MY POSTS")]),
+      _c("h1", { staticClass: "col-12 text-center" }, [_vm._v("MY POSTS")]),
       _vm._v(" "),
-      _c(
-        "div",
-        [_c("PostCardListComponent", { attrs: { posts: _vm.posts } })],
-        1
-      ),
+      _vm.posts.length > 0
+        ? _c(
+            "div",
+            [_c("PostCardListComponent", { attrs: { posts: _vm.posts } })],
+            1
+          )
+        : _c("div", [_vm._v("Caricamento in corso")]),
     ]),
   ])
 }

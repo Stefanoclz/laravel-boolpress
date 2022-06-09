@@ -1,11 +1,12 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-12">MY POSTS</div>
+      <h1 class="col-12 text-center">MY POSTS</h1>
 
-      <div>
+      <div v-if="posts.length > 0">
         <PostCardListComponent :posts="posts" />
       </div>
+      <div v-else>Caricamento in corso</div>
     </div>
   </div>
 </template>
