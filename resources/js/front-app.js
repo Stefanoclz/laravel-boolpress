@@ -39,9 +39,12 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 import AppComponent from './app/AppComponent';
 
+import router from './routes'
+
 const app = new Vue({
     el: '#app',
-    render: (h) => h(AppComponent)
+    render: (createElement) => createElement(AppComponent),
+    router
 });
 
 
