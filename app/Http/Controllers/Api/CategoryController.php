@@ -16,7 +16,7 @@ class CategoryController extends Controller
     {
         //
         $categories = Category::all();
-        $result = ['result'=>$categories, 'success'=>true];
+        $result = ['results'=>$categories, 'success'=>true];
 
         return response()->json($result);
     }
