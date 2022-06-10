@@ -52,15 +52,18 @@ export default {
           console.log(e);
         });
     },
-  },
-  goPreviousPage() {
-    this.loadPage(this.previousPageLink);
-  },
-  goNextPage() {
-    this.loadPage(this.nextPageLink);
+    goPreviousPage() {
+      this.loadPage(this.previousPageLink);
+    },
+    goNextPage() {
+      this.loadPage(this.nextPageLink);
+    },
   },
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+img {
+  max-width: 500px;
+}
 </style>

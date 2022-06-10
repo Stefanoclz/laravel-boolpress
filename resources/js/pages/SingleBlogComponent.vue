@@ -39,7 +39,7 @@ export default {
     const id = this.$route.params.id;
     console.log("mounted with id", id);
     window.axios
-      .get("http://127.0.0.1:8000/api/posts" + id)
+      .get("http://127.0.0.1:8000/api/posts/" + id)
       .then(({ status, data }) => {
         console.log(data);
         if (status === 200 && data.success) {
