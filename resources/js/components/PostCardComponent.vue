@@ -3,23 +3,25 @@
     <div class="mr-4">
       <img :src="'storage/' + cover" :alt="title" />
     </div>
-    <div class="middle text-center">
+    <div class="middle text-center px-5">
       <h2>{{ title }}</h2>
       <hr />
-      <p>{{ content }}</p>
+      <p>{{ trimmedContent }}...<i>(continua)</i></p>
     </div>
+    <router-link :to="{ name: 'single-blog', params: { id } }"
+      >Visualizza</router-link
+    >
   </div>
 </template>
 
 <script>
 export default {
   name: "PostCardComponent",
-  props: ["title", "cover", "content"],
+  props: ["title", "cover", "content", "id"],
   computed: {
     trimmedContent() {
       const shortContent =
-        this.content.length > 20 ? this.content.substring(0, 20) : this.content;
-
+        this.content.length > 20 ? this.content.substring(0, 80) : this.content;
       return shortContent;
     },
   },

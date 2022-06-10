@@ -9,6 +9,7 @@ import ContactsComponent from './pages/ContactsComponent'
 import NotFoundComponent from './pages/NotFoundComponent'
 import WhoWeAreComponent from './pages/WhoWeAreComponent'
 import BlogComponent from './pages/BlogComponent'
+import SingleBlogComponent from './pages/SingleBlogComponent'
 
 const router = new VueRouter({
     mode: 'history',
@@ -37,7 +38,12 @@ const router = new VueRouter({
             path: '/who-we-are',
             name: 'who-we-are',
             component: WhoWeAreComponent,
-        }
+        },
+        {
+            path: '/blog/:id',
+            name: 'single-blog',
+            component: SingleBlogComponent
+        },
     ]
 })
 
