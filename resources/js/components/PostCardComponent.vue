@@ -8,7 +8,7 @@
       <hr />
       <p>{{ trimmedContent }}...<i>(continua)</i></p>
     </div>
-    <router-link :to="{ name: 'single-blog', params: { id } }"
+    <router-link :to="{ name: 'single-blog', params: { slug } }"
       >Visualizza</router-link
     >
   </div>
@@ -17,7 +17,7 @@
 <script>
 export default {
   name: "PostCardComponent",
-  props: ["title", "cover", "content", "id"],
+  props: ["title", "cover", "content", "slug"],
   computed: {
     trimmedContent() {
       const shortContent =
