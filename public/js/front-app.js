@@ -2141,7 +2141,7 @@ __webpack_require__.r(__webpack_exports__);
           _this.currentPage = data.results.current_page;
           _this.previousPageLink = data.results.prev_page_url;
           _this.nextPageLink = data.results.next_page_url;
-          _this.lasttPage = data.results.last_page;
+          _this.lastPage = data.results.last_page;
         }
       })["catch"](function (e) {
         console.log(e);

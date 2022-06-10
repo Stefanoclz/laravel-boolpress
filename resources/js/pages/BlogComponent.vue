@@ -45,7 +45,7 @@ export default {
             this.currentPage = data.results.current_page;
             this.previousPageLink = data.results.prev_page_url;
             this.nextPageLink = data.results.next_page_url;
-            this.lasttPage = data.results.last_page;
+            this.lastPage = data.results.last_page;
           }
         })
         .catch((e) => {
