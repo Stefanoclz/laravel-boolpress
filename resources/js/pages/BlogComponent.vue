@@ -5,11 +5,21 @@
 
       <div v-if="posts.length > 0">
         <PostCardListComponent :posts="posts" />
-        <button v-if="previousPageLink" @click="goPreviousPage()">Prev</button>
+        <div class="pagination">
+          <button
+            v-if="previousPageLink"
+            @click="goPreviousPage()"
+            class="mr-3"
+          >
+            Prev
+          </button>
 
-        {{ currentPage }}/{{ lastPage }}
+          {{ currentPage }}/{{ lastPage }}
 
-        <button v-if="nextPageLink" @click="goNextPage()">Next</button>
+          <button v-if="nextPageLink" @click="goNextPage()" class="ml-3">
+            Next
+          </button>
+        </div>
       </div>
       <div v-else>Caricamento in corso</div>
     </div>
@@ -63,6 +73,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.pagination {
+  width: 20%;
+  margin: 50px auto;
+}
+
 img {
   max-width: 500px;
 }
