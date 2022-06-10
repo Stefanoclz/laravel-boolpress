@@ -2264,6 +2264,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "SingleBlogComponent",
   data: function data() {
@@ -38979,43 +38980,52 @@ var render = function () {
       _c("h1", { staticClass: "col-12 text-center" }, [_vm._v("MY POSTS")]),
       _vm._v(" "),
       _vm.post
-        ? _c("div", { staticClass: "col-12 mb-2" }, [
-            _c("h2", [_vm._v(_vm._s(_vm.post.title))]),
-            _vm._v(" "),
-            _c("div", [
-              _c("img", {
-                attrs: {
-                  src: "/storage/" + _vm.post.cover,
-                  alt: _vm.post.title,
-                },
-              }),
-            ]),
-            _vm._v(" "),
-            _c("p", [_vm._v(_vm._s(_vm.post.content))]),
-            _vm._v(" "),
-            _c("div", [
-              _c("h4", [_vm._v("Categoria:")]),
-              _vm._v(
-                "\n        " + _vm._s(_vm.post.category.name) + "\n      "
-              ),
-            ]),
-            _vm._v(" "),
-            _c("div", [
-              _c("h3", [_vm._v("Tags:")]),
+        ? _c(
+            "div",
+            { staticClass: "col-12 mb-2" },
+            [
+              _c("h2", [_vm._v(_vm._s(_vm.post.title))]),
               _vm._v(" "),
-              _c(
-                "ul",
-                _vm._l(_vm.post.tags, function (tag) {
-                  return _c("li", { key: tag.id }, [
-                    _vm._v(
-                      "\n            " + _vm._s(tag.name) + "\n          "
-                    ),
-                  ])
+              _c("div", [
+                _c("img", {
+                  attrs: {
+                    src: "/storage/" + _vm.post.cover,
+                    alt: _vm.post.title,
+                  },
                 }),
-                0
-              ),
-            ]),
-          ])
+              ]),
+              _vm._v(" "),
+              _c("p", [_vm._v(_vm._s(_vm.post.content))]),
+              _vm._v(" "),
+              _c("div", [
+                _c("h4", [_vm._v("Categoria:")]),
+                _vm._v(
+                  "\n        " + _vm._s(_vm.post.category.name) + "\n      "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("h3", [_vm._v("Tags:")]),
+                _vm._v(" "),
+                _c(
+                  "ul",
+                  _vm._l(_vm.post.tags, function (tag) {
+                    return _c("li", { key: tag.id }, [
+                      _vm._v(
+                        "\n            " + _vm._s(tag.name) + "\n          "
+                      ),
+                    ])
+                  }),
+                  0
+                ),
+              ]),
+              _vm._v(" "),
+              _c("router-link", { attrs: { to: { name: "blog" } } }, [
+                _vm._v("Indietro"),
+              ]),
+            ],
+            1
+          )
         : _c("div", [_vm._v("Caricamento in corso")]),
     ]),
   ])

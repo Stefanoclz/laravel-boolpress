@@ -21,6 +21,7 @@
             </li>
           </ul>
         </div>
+        <router-link :to="{ name: 'blog' }">Indietro</router-link>
       </div>
       <div v-else>Caricamento in corso</div>
     </div>
